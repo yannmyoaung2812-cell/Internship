@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        h1{
+            margin:15px;
+        }
+        .body{
+            width:1200px;
+            padding-left: 300px;
+            margin-bottom: 30px;
+        }
+
+        .logocontainer{
+            display:flex;
+            background-color: black;
+            color:white;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+        }
+        
+        .logo{
+            display:flex;
+            gap:30px;
+        }
+
+
+        .mid{
+            width:1200px;
+            padding-left: 300px;
+            display:flex;
+            justify-content: space-around;
+
+        }
+
+        h3{
+            border: 1px solid rgb(180, 202, 244);
+            padding:30px;
+            padding-left:75px;
+            padding-right: 75px;
+            margin:1px;
+            border-radius: 10px;
+            background-color: rgb(180, 202, 244);
+            margin-bottom: 30px;
+        }
+
+        .bot{
+            display:flex;
+            width: 1200px;
+            padding-left: 300px;
+            margin-bottom: 15px;
+        }
+
+        select{
+            width:400px;
+        }
+
+        .left{
+            border:1px solid white;
+            margin:auto;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        .alex{
+            padding-left:35px;
+            text-align: left;
+            padding-top: 10px;
+        }
+
+        .right{
+            margin:auto;
+            padding:10px;
+            /* background-color: blue; */
+            color:white;
+            border: 1px solid rgb(198, 197, 197);  
+            background-color: rgb(198, 197, 197);
+            height:350px;
+            width:400px;       
+            border-radius: 10px;  
+        }
+
+        .hp{
+            margin-top: 120px;
+            background-color: blue;
+            width:300px;
+            height:100px;
+            margin-left: 40px;
+        }
+
+        .but{
+            padding-left: 350px;
+        }
+        .btn{
+            color:white;
+            background-color: rgb(0, 115, 255);
+            padding-left: 12px;
+            padding-right: 12px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border:1px solid rgb(0, 115, 255);
+            border-radius: 5px;
+        }
+
+        select{
+            background-color: rgb(198, 197, 197);
+            margin-bottom: 15px;
+        }
+
+    </style>
+</head>
+<body bgcolor="lightgrey">
+    <div class="body">
+        <h1>CSS Utility Simulator</h1>
+        <p>Change the inputs below to see how atomic classes combine to build UIs.</p>
+        <br>
+        <nav class="logocontainer">
+            <h2>My Logo</h2>
+            <div class="logo">   
+                <h4>Home</h4>
+                <h4>About</h4>
+                <h4>Contact</h4>
+            </div>
+        </nav>
+    </div>
+    <div class="mid">
+        <h3>Feature 1</h3>
+        <h3>Feature 2</h3>
+        <h3>Feature 3</h3>
+    </div>
+    <div class="bot">
+        <div class="left">
+            <h2>Utility Controls</h2>
+            <br>
+            <p>Padding(Spacing)</p>
+            <select>
+                <option>Medium(p-8)</option>
+            </select>
+            <p>Background Theme(Colors)</p>
+            <select>
+                <option>Primary Blue</option>
+            </select>
+            <p>Text Size(Typography)</p>
+            <select>
+                <option>Large (text-xl)</option>
+            </select>
+            <p>Corner Radius (Borders)</p>
+            <select>
+                <option>Square (rounded-none)</option>
+            </select>
+            <p>Shadow(Depth)</p>
+            <select>
+                <option>Medium(shadow-md)</option>
+            </select>
+        </div>
+        <div class="right">
+            <div class="hp">
+            <h2 class="alex">Alex Walker</h2>
+            <p class="alex">Full-Stack Web Developer building awesome things with Tailwind CSS.</p>
+            </div>
+        </div>
+    </div>
+    <div class="but">
+        <button type="button" class="btn">Submit</button>
+        <button type="button" class="btn">Hover Me Slowly!</button>
+    </div>    
+</body>
+</html>

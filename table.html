@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/jpg" href="batman-chromebook-wallpaper.jpg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+
+          *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        table, th , td{
+                border:1px solid blue;
+                border-collapse: collapse;
+        }
+
+        th{
+            background-color: rgb(103, 181, 237);
+        }
+
+        td{
+            background-color: rgb(117, 206, 117);
+        }
+
+        table{
+            width:800px;
+            height:300px;
+            margin:auto;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th rowspan="2">No</th>
+            <th rowspan="2">Student Name</th>
+            <th rowspan="2">Gender</th>
+            <th rowspan="2">Roll No.</th>
+            <th colspan="3">Marks</th>
+        </tr>   
+
+        <tr>
+            <th>Myanmar</th>
+            <th>English</th>
+            <th>Maths</th>
+        </tr>
+
+        <tr>
+            <td align="center">1</td>
+            <td>Su Su</td>
+            <td rowspan="2" align="center">Female</td>
+            <td align="center">5CS-32</td>
+            <td align="right">60</td>
+            <td align="right">75</td>
+            <td align="right">86</td>
+        </tr>
+
+        <tr>
+            <td align="center">2</td>
+            <td>Moe Moe</td>
+            <td align="center">5CS-33</td>
+            <td align="right">78</td>
+            <td align="right">86</td>
+            <td align="right">84</td>
+        </tr>
+        
+        <tr>
+            <td align="center">3</td>
+            <td>Kyaw Kyaw</td>
+            <td rowspan="3" align="center">Male</td>
+            <td align="center">5CS-34</td>
+            <td align="right">89</td>
+            <td align="right">43</td>
+            <td align="right">86</td>
+        </tr>
+
+        <tr>
+            <td align="center">4</td>
+            <td>Mg Mg</td>
+            <td align="center">5CS-35</td>
+            <td align="right">76</td>
+            <td align="right">75</td>
+            <td align="right">75</td>
+        </tr>
+
+        <tr>
+            <td align="center">5</td>
+            <td>Aung Aung</td>
+            <td align="center">5CS-36</td>
+            <td align="right">87</td>
+            <td align="right">75</td>
+            <td align="right">86</td>
+        </tr>        
+        
+    </table>
+</body>
+</html>
