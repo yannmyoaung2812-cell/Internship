@@ -1,138 +1,156 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phone Calculator</title>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      body {
+        background-color: rgb(55, 55, 55);
+      }
 
-        body {
-            background-color: rgb(55, 55, 55);
-        }
-        
-        .container {
-            width:300px;
-            height:600px;
-            background-color: white;           
-            margin:50px auto;
-            border:none;
-            border-radius: 20px;
-        }
-        button {
-            width: 55px;
-            height: 55px;
-            margin:4px 2px;
-            border:none;
-            background: rgb(183, 180, 180);
-            color: rgb(24, 104, 224);
-            border-radius: 55px;
-            font-size: 1em;
-        }
+      .container {
+        width: 300px;
+        height: 600px;
+        background-color: white;
+        margin: 50px auto;
+        border: none;
+        border-radius: 20px;
+      }
+      button {
+        width: 55px;
+        height: 55px;
+        margin: 4px 2px;
+        border: none;
+        background: rgb(183, 180, 180);
+        color: rgb(24, 104, 224);
+        border-radius: 55px;
+        font-size: 1em;
+      }
 
-        .answer {
-            margin-bottom: 180px;
-            text-align: end;
-            margin-right: 30px;
-            padding-top: 40px;
-            font-size: 30px;
-            color:green;
-        }
-        .btn-div {
-            margin-left: 28px;
-        }
+      .answer {
+        margin-bottom: 135px;
+        text-align: end;
+        margin-right: 30px;
+        margin-left: 22px;
+        padding-top: 40px;
+        font-size: 30px;
+        color: green;
+        width: 250px;
+        height: 120px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+      .btn-div {
+        margin-left: 28px;
+      }
 
-        .btn{
-            font-size: 25px;
-        }
+      .btn {
+        font-size: 25px;
+      }
 
-        #ac{
-            color: brown;
-        }
-        #delete{
-            color: brown;
-        }
-        #sign{
-            color:brown;
-            font-size: 30px;
-        }
-        #equal{
-            color:white;
-            background-color: brown;
-        }
+      #ac {
+        color: brown;
+      }
+      #delete {
+        color: brown;
+      }
+      #sign {
+        color: brown;
+        font-size: 30px;
+      }
+      #equal {
+        color: white;
+        background-color: brown;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="answer" id="ans">
-            0|
-        </div>
-            <div class="btn-div">
-                <button class="btn" id="ac">C</button>
-                <button class="btn" id="delete">Del</button>
-                <button class="btn">%</button>
-                <button class="btn" id="sign">/</button>
-                <button class="btn">7</button>
-                <button class="btn">8</button>
-                <button class="btn">9</button>
-                <button class="btn" id="sign">*</button>
-                <button class="btn">4</button>
-                <button class="btn">5</button>
-                <button class="btn">6</button>
-                <button class="btn" id="sign">-</button>
-                <button class="btn">1</button>
-                <button class="btn">2</button>
-                <button class="btn">3</button>
-                <button class="btn" id="sign">+</button>
-                <button class="btn">( )</button>
-                <button class="btn">0</button>
-                <button class="btn">.</button>
-                <button class="btn" id="equal">=</button>
-            </div>
-        </div>
+      <div class="answer" id="ans">|</div>
+      <div class="btn-div">
+        <button class="btn" id="ac">C</button>
+        <button class="btn" id="delete">⌫</button>
+        <button class="btn">%</button>
+        <button class="btn" id="sign">/</button>
+        <button class="btn">7</button>
+        <button class="btn">8</button>
+        <button class="btn">9</button>
+        <button class="btn" id="sign">*</button>
+        <button class="btn">4</button>
+        <button class="btn">5</button>
+        <button class="btn">6</button>
+        <button class="btn" id="sign">-</button>
+        <button class="btn">1</button>
+        <button class="btn">2</button>
+        <button class="btn">3</button>
+        <button class="btn" id="sign">+</button>
+        <button class="btn">( )</button>
+        <button class="btn">0</button>
+        <button class="btn">.</button>
+        <button class="btn" id="equal">=</button>
+      </div>
+    </div>
     <script>
-    const ans = document.getElementById("ans");
-    const buttons = document.querySelectorAll("button");
+      const ans = document.getElementById("ans");
+      const buttons = document.querySelectorAll("button");
 
-    let expression = "";
+      let expression = "";
 
-    buttons.forEach((button) => {
-    button.addEventListener("click", () => {
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const value = button.innerText;
 
-        const value = button.innerText;
-
-        if (value === "C") {
+          if (value === "C") {
             expression = "";
-            ans.innerText = "0";
-        }
-
-        else if (value === "Del") {
+            ans.innerText = "|";
+          } else if (value === "⌫") {
             expression = expression.slice(0, -1);
             ans.innerText = expression || "0";
-        }
-        
-        else if (value === "=") {
+          } else if (value === "=") {
             try {
-                expression = eval(expression).toString();
-                ans.innerText = expression;
+              let finalExpression = expression.replace(/%/g, "/100");
+
+              expression = eval(finalExpression).toString();
+
+              ans.innerText = expression;
             } catch {
-                ans.innerText = "Error";
-                expression = "";
+              ans.innerText = "Error";
+              expression = "";
             }
-        }
+          } else {
+            const operators = ["+", "-", "*", "/", "%"];
+            const lastChar = expression.slice(-1);
 
-        else {
-            expression += value;
+            // operator ၂ခုဆက်တိုက်မရအောင်
+            if (operators.includes(value) && operators.includes(lastChar)) {
+              return;
+            }
+
+            // () button
+            if (value === "( )") {
+              let openCount = (expression.match(/\(/g) || []).length;
+              let closeCount = (expression.match(/\)/g) || []).length;
+
+              if (openCount === closeCount || lastChar === "(") {
+                expression += "(";
+              } else {
+                expression += ")";
+              }
+            } else {
+              expression += value;
+            }
+
             ans.innerText = expression;
-        }
-
+          }
         });
-    });
+      });
     </script>
-</body>
+  </body>
 </html>
