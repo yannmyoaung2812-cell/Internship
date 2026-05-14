@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS Test1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body >
+
+    <div class="md:w-1/2 w-full mx-auto md:mt-36 mt-0 p-10 bg-pink-300 border rounded-2xl shadow-xl flex md:flex-row flex-col justify-between">
+
+        <!-- Left Side -->
+        <div class="gap-2 flex flex-col">
+          <h2 class="text-2xl font-bold mb-4">Update Variables</h2>
+
+          <label for="name" class="font-medium">Name(String):</label>
+          <div class="">
+            <input type="text" class="border rounded-lg px-3 py-2 w-64 bg-gray-200"/>
+          </div>
+
+          <label for="age" class="font-medium">Age(Number):</label>
+
+          <div class="">
+            <input type="number" class="border rounded-lg px-3 py-2 w-64 bg-gray-200"/>
+          </div>
+
+          <label for="vipStatus" class="font-medium">
+              VIP Status(Boolean):
+          </label>
+
+          <div class="">
+            <input type="checkbox" id="vipStatus" class="w-5 h-5"/>
+          </div>
+
+          <label for="cardColor" class="font-medium">Card Color:</label>
+          <div>
+            <input type="color" id="cardColor" class="w-20 h-10 bg-gray-100 border rounded-lg" />
+          </div>
+
+        </div>
+
+        <!-- Right Side -->
+        <div class="">
+          <h2 class="text-2xl font-bold mb-4 font-bold">Live DOM Output</h2>
+
+          <div class="h-32 mt-10 border rounded-2xl bg-blue-400 p-4 h-[200px] w-[300px]">
+            <p id="vipOutput" class=" border rounded-2xl bg-yellow-300 p-1 text-center w-[80px] text-xs mt-5">Vip Member</p> 
+            <h3 id="nameOutput" class="text-xl font-semibold pt-[20px]">Name:</h3>
+            <p id="ageOutput" class="mt-4">Age:</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>
