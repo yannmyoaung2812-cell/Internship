@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>task4-tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+<div class="w-full md:w-4/5 mx-auto h-[1500px]">
+
+  <!-- Header (Navbar removed from here) -->
+  <div class="flex flex-col gap-2 mb-4">
+    <p class="font-extrabold text-4xl md:text-5xl text-indigo-800 bg-clip-text text-transparent bg-gradient-to-r  from-indigo-800 to-blue-500 pb-2">Tailwind Utility Simulator</p>
+    <p class="text-base md:text-xl">
+      Change the inputs below to see how atomic classes combine to build UIs.
+    </p>
+  </div>
+
+  <!-- Navbar (Now outside the header div, so it sticks to the main container) -->
+  <nav class="bg-gradient-to-r from-indigo-800 to-blue-500 pb-3 text-white p-3 flex justify-between items-center sticky top-0 z-50">
+
+    <h1 class="text-3xl font-extrabold">Logo</h1>
+
+    <!-- Hamburger -->
+    <button id="menu-btn" class="md:hidden text-2xl">
+      ☰
+    </button>
+
+    <!-- Menu -->
+    <ul id="menu" class="hidden flex-col absolute top-14 left-0 w-full p-4 gap-8
+             md:flex md:flex-row md:static md:w-auto md:p-0 text-xl font-bold md:bg-transparent  bg-indigo-600 text-center">
+
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+
+    </ul>
+
+  </nav>
+
+  <!-- Features -->
+  <div class="grid lg:grid-cols-3 sm:grid-cols-1 mb-5 gap-10 mt-5 mx-10">
+    <h3 class="bg-gradient-to-r from-indigo-800 to-blue-500 rounded-xl px-16 py-7 text-center text-white">Feature 1</h3>
+    <h3 class="bg-gradient-to-r from-indigo-800 to-blue-500 rounded-xl px-16 py-7 text-center text-white">Feature 2</h3>
+    <h3 class="bg-gradient-to-r from-indigo-800 to-blue-500 rounded-xl px-16 py-7 text-center text-white">Feature 3</h3>
+  </div>
+
+  <!-- Main --> 
+  <div class="flex flex-col md:flex-row gap-6">
+
+    <!-- Controls -->
+    <div class="border rounded-xl bg-gray-300 p-5 w-full md:w-1/2">
+      <p class="font-extrabold text-xl mb-2">Utility Controls</p>
+
+      <p>Padding</p>
+      <select class="rounded-lg w-full mb-2 p-1">
+        <option>Medium(p-8)</option>
+      </select>
+
+      <p>Background</p>
+      <select class="rounded-lg w-full mb-2 p-1">
+        <option>Primary Blue</option>
+      </select>
+
+      <p>Text Size</p>
+      <select class="rounded-lg w-full mb-2 p-1">
+        <option>Large</option>
+      </select>
+
+      <p>Radius</p>
+      <select class="rounded-lg w-full mb-2 p-1">
+        <option>Square</option>
+      </select>
+
+      <p>Shadow</p>
+      <select class="rounded-lg w-full p-1">
+        <option>Medium</option>
+      </select>
+    </div>
+
+    <!-- Preview -->
+    <div class="w-full md:w-1/2">
+
+      <section class="bg-gray-400 text-white rounded-xl flex justify-center items-center h-48">
+        <div class="bg-gradient-to-r from-indigo-800 to-blue-500 p-4 py-5 w-60">
+          <p class="font-extrabold">Alex Walker</p>
+          <p>Full-Stack Web Developer building awesome things.</p>
+        </div>
+      </section>
+
+      <section class="bg-black p-12 mt-7 rounded-xl relative">
+        <h2 class="text-white bg-gray-600 absolute top-0 right-0 p-1 rounded-lg text-sm">
+          HTML Output
+        </h2>
+
+        <code class="text-green-500 text-sm">
+            &lt;div class=&quot;w-60 bg-blue-600 p-3 h-30&quot;&gt;
+            &lt;p class=&quot;font-extrabold&quot;&gt;Alex Walker&lt;/p&gt;
+            &lt;p&gt;Full-Stack Web Developer building awesome things with Tailwind CSS.&lt;/p&gt;
+            &lt;/div&gt;
+        </code>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="mt-5 flex flex-col md:flex-row gap-3">
+    <button class="px-5 py-2 bg-blue-600 transition-all duration-300 hover:bg-blue-300 hover:scale-105  rounded-lg text-white">Submit</button>
+    <a href="#" class="text-blue-900">Read More</a>
+    <button class="px-7 py-2 bg-blue-600 transition-all duration-300 hover:bg-blue-300 hover:scale-105 rounded-lg text-white">
+      Hover Me Slowly!
+    </button>
+  </div>
+
+</div>
+
+<!-- JS -->
+<script>
+const btn = document.getElementById("menu-btn");
+const menu = document.getElementById("menu");
+
+btn.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+});
+</script>
+
+</body>
+</html>
